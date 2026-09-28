@@ -21,14 +21,15 @@ const About = () => {
             <p className="subtext">
               {/* Over the last 4 years, I developed my frontend and backend dev */}
               {/* skills to deliver dynamic and software and web applications. */}
-               I'm passionate about building scalable and user-centric web applications. 
-              I enjoy turning ideas into real-world products using modern web technologies.
+              I'm passionate about building scalable and user-centric web
+              applications. I enjoy turning ideas into real-world products using
+              modern web technologies.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
         {/* Grid 2 */}
-        <div className="grid-default-color grid-2">
+        {/* <div className="grid-default-color grid-2">
           <div
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
@@ -77,13 +78,137 @@ const About = () => {
               containerRef={grid2Container}
             />
           </div>
+        </div> */}
+
+        <div className="grid-default-color grid-2">
+          <div
+            ref={grid2Container}
+            className="relative flex items-center justify-center w-full h-full overflow-hidden"
+          >
+            {/* Main Text */}
+            <div className="z-10 text-center pointer-events-none">
+              <p className="text-4xl md:text-5xl font-semibold text-gray-500/80">
+                CODE IS CRAFT
+              </p>
+
+            </div>
+
+            {/* Development Concepts */}
+
+            <Card
+              style={{ rotate: "8deg", top: "2%", left: "5%" }}
+              text="Design Principles"
+              containerRef={grid2Container}
+              floating
+            />
+
+            <Card
+              style={{ rotate: "0deg", top: "8%", left: "42%" }}
+              image="assets/logos/react.svg"
+              containerRef={grid2Container}
+              floating
+            />
+
+            <Card
+              style={{ rotate: "-20deg", top: "2%", right: "5%" }}
+              text="SOLID"
+              containerRef={grid2Container}
+              floating
+            />
+
+             <Card
+              style={{ rotate: "-8deg", top: "45%", left: "5%" }}
+              image="assets/logos/html5.svg"
+              containerRef={grid2Container}
+              floating
+            />
+
+            
+
+            <Card
+              style={{ rotate: "20deg", bottom: "10%", left: "60%" }}
+              text="Clean Code"
+              containerRef={grid2Container}
+              floating
+            />
+            
+
+            <Card
+              style={{ rotate: "-20deg", top: "70%", left: "10%" }}
+              text="REST API"
+              containerRef={grid2Container}
+              floating
+            />
+  
+
+            {/* Tech Stack Icons */}
+
+            
+
+           
+
+            <Card
+              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
+              image="assets/logos/vitejs.svg"
+              containerRef={grid2Container}
+              floating
+            />
+
+            <Card
+              style={{ rotate: "20deg", top: "40%", right: "3%" }}
+              image="assets/logos/javascript.svg"
+              containerRef={grid2Container}
+              floating
+            />
+
+            <Card
+              style={{ rotate: "-20deg", bottom: "5%", left: "5%" }}
+              image="assets/logos/nodejs.svg"
+              containerRef={grid2Container}
+              floating
+            />
+
+            <Card
+              style={{ rotate: "5deg", bottom: "10%", right: "5%" }}
+              image="assets/logos/mongodb.svg"
+              containerRef={grid2Container}
+              floating
+            />
+
+            <Card
+              style={{ rotate: "-30deg", top: "35%", left: "5%" }}
+              image="assets/logos/tailwindcss.svg"
+              containerRef={grid2Container}
+              floating
+            />
+            <Card
+              style={{ rotate: "30deg", top: "5%", left: "85%" }}
+              image="assets/logos/auth0.svg"
+              containerRef={grid2Container}
+              floating
+            />
+            <Card
+              style={{ rotate: "-40deg", bottom: "20%", right: "30%" }}
+              image="assets/logos/express.svg"
+              containerRef={grid2Container}
+              floating
+            />
+
+            <Card
+              style={{ rotate: "25deg", bottom: "5%", left: "40%" }}
+              image="assets/logos/git.svg"
+              containerRef={grid2Container}
+              floating
+            />
+          </div>
         </div>
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">
-            Currently based in Bhopal, India (IST), and comfortable collaborating with teams across different time zones.
+              Currently based in Bhopal, India (IST), and comfortable
+              collaborating with teams across different time zones.
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">

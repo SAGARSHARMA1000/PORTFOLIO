@@ -224,73 +224,97 @@
 // ];
 export const myProjects = [
   {
-    id: 1,
-    title: "E-commerce Platform",
-    description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop globally and receive products domestically.",
-    subDescription: [
-      "Built a scalable application using ASP.NET Core MVC integrating global platforms.",
-      "Implemented secure authentication using ASP.NET Core Identity.",
-      "Used Entity Framework Core for efficient database management.",
-      "Designed a responsive UI with Tailwind CSS.",
-      "Integrated payment systems, localization, and product filtering.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/accessories.jpg",
-    tags: [
-      { id: 1, name: "React", path: "/assets/logos/react.svg" },
-      { id: 2, name: "Express", path: "/assets/logos/express.png" },
-      { id: 3, name: "MongoDB", path: "/assets/logos/mongo.svg" },
-      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
-    ],
-  },
+  id: 1,
+  title: "RMA Store – MERN E-commerce Platform",
+  description:
+    "Developed a fully customized MERN-stack e-commerce platform for a client, featuring secure online payments, advanced product management, responsive UI, and a seamless shopping experience across devices.",
 
-  {
-    id: 2,
-    title: "AgriAssure (Escrow-Based Farming Platform)",
-    description:
-      "A secure platform connecting farmers and buyers with escrow-based payments ensuring trust and transparency in agricultural transactions.",
-    subDescription: [
-      "Designed and implemented an escrow payment system to hold funds securely until delivery confirmation.",
-      "Built role-based dashboards for farmers and buyers.",
-      "Implemented wallet system with locked escrow and available balances.",
-      "Developed REST APIs using Node.js and Express.",
-      "Used MongoDB for scalable data storage and transaction tracking.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/agriassure.jpg",
-    tags: [
-      { id: 1, name: "React", path: "/assets/logos/react.svg" },
-      { id: 2, name: "Node.js", path: "/assets/logos/nodejs.svg" },
-      { id: 3, name: "MongoDB", path: "/assets/logos/mongodb.svg" },
-      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
-    ],
-  },
+  subDescription: [
+    "Built a scalable full-stack e-commerce application using React, Node.js, Express, and MongoDB.",
+    "Implemented secure authentication and role-based access control for admins and customers.",
+    "Integrated Razorpay payment gateway with order management and payment verification.",
+    "Developed advanced product filtering, search, category management, and inventory handling.",
+    "Created a responsive and modern UI using Tailwind CSS optimized for mobile, tablet, and desktop.",
+    "Designed an admin dashboard for managing products, orders, customers, and analytics efficiently.",
+    "Optimized API performance, image handling, and database queries for smooth user experience.",
+  ],
 
-  {
-    id: 3,
-    title: "StudyNotion (EdTech Platform)",
-    description:
-      "An online learning platform enabling users to purchase courses, watch lectures, and track learning progress.",
-    subDescription: [
-      "Developed full-stack application with authentication and role-based access.",
-      "Integrated Razorpay payment gateway for course purchases.",
-      "Implemented video streaming and cloud media handling.",
-      "Built instructor dashboard for course creation and analytics.",
-      "Used JWT authentication for secure user sessions.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/studynotion.jpg",
-    tags: [
-      { id: 1, name: "React", path: "/assets/logos/react.svg" },
-      { id: 2, name: "Node.js", path: "/assets/logos/nodejs.svg" },
-      { id: 3, name: "MongoDB", path: "/assets/logos/mongodb.svg" },
-      { id: 4, name: "Razorpay", path: "/assets/logos/razorpay.svg" },
-    ],
-  },
+  href: "",
+  logo: "",
+  image: "/assets/projects/rma.png",
+
+  tags: [
+    { id: 1, name: "React", path: "/assets/logos/react.svg" },
+    { id: 2, name: "Node.js", path: "/assets/logos/nodejs.svg" },
+    { id: 3, name: "Express.js", path: "/assets/logos/express.svg" },
+    { id: 4, name: "MongoDB", path: "/assets/logos/mongodb.svg" },
+    { id: 5, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+    { id: 6, name: "Razorpay", path: "/assets/logos/razorpay.svg" },
+  ],
+},
+
+{
+  id: 2,
+  title: "AgriAssure – Escrow-Based Farming Platform",
+
+  description:
+    "Built a secure agri-commerce platform that connects farmers and buyers through an escrow-based payment system, ensuring transparent transactions, secure fund handling, and trusted crop trading.",
+
+  subDescription: [
+    "Developed a full-stack MERN application enabling secure agricultural product trading between farmers and buyers.",
+    "Implemented an escrow payment workflow where funds remain securely locked until order delivery confirmation.",
+    "Built role-based dashboards with separate workflows for farmers, buyers, and transaction management.",
+    "Designed a digital wallet system with escrow balance tracking, transaction history, and secure payouts.",
+    "Created RESTful APIs using Node.js and Express for authentication, payments, orders, and dispute handling.",
+    "Used MongoDB for scalable database management, transaction storage, and real-time order tracking.",
+    "Designed a responsive and user-friendly interface using Tailwind CSS optimized for all devices.",
+  ],
+
+  href: "",
+  logo: "",
+  image: "/assets/projects/agri1.png",
+
+  tags: [
+    { id: 1, name: "React", path: "/assets/logos/react.svg" },
+    { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+    { id: 3, name: "JavaScript", path: "/assets/logos/javascript.svg" },
+    { id: 4, name: "Express.js", path: "/assets/logos/express.svg" },
+    { id: 5, name: "Node.js", path: "/assets/logos/nodejs.svg" },
+    { id: 5, name: "MongoDB", path: "/assets/logos/mongodb.svg" },
+    
+  ],
+},
+
+{
+  id: 3,
+  title: "StudyNotion – EdTech Learning Platform",
+
+  description:
+    "Developed a full-stack EdTech platform where students can purchase courses, stream video lectures, and track learning progress, while instructors can manage content and monitor analytics.",
+
+  subDescription: [
+    "Built a scalable MERN-stack learning platform with authentication and role-based access for students and instructors.",
+    "Integrated Razorpay payment gateway for secure course purchases and enrollment management.",
+    "Implemented video streaming and cloud-based media handling for optimized course content delivery.",
+    "Developed instructor dashboards for course creation, student management, and analytics tracking.",
+    "Implemented JWT-based authentication and protected routes for secure user sessions.",
+    "Designed responsive and modern UI components using Tailwind CSS for seamless multi-device experience.",
+    "Optimized backend APIs, media uploads, and database queries for improved performance and scalability.",
+  ],
+
+  href: "",
+  logo: "",
+  image: "/assets/projects/study.png",
+
+  tags: [
+    { id: 1, name: "React", path: "/assets/logos/react.svg" },
+    { id: 2, name: "Express.js", path: "/assets/logos/express.svg" },
+    { id: 3, name: "Node.js", path: "/assets/logos/nodejs.svg" },
+    { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+    { id: 5, name: "MongoDB", path: "/assets/logos/mongodb.svg" }, 
+    { id: 6, name: "Razorpay", path: "/assets/logos/razorpay.svg" },
+  ],
+},
 
   {
     id: 4,
@@ -309,17 +333,17 @@ export const myProjects = [
     image: "/assets/projects/travel.jpg",
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
-      { id: 2, name: "Node.js", path: "/assets/logos/nodejs.svg" },
-      { id: 3, name: "Express", path: "/assets/logos/express.svg" },
-      { id: 4, name: "MongoDB", path: "/assets/logos/mongodb.svg" },
+      { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 3, name: "JavaScript", path: "/assets/logos/javascript.svg" },
+      { id: 4, name: "Vite", path: "/assets/logos/vitejs.svg" },
     ],
   },
 
   {
     id: 5,
-    title: "Parallax Portfolio Website",
+    title: "Parallax Website",
     description:
-      "A modern portfolio website featuring parallax animations and interactive UI for showcasing projects and skills.",
+      "A modern website featuring parallax animations and interactive UI for showcasing projects and skills.",
     subDescription: [
       "Built visually engaging UI using React.js and Tailwind CSS.",
       "Implemented parallax effects using GSAP and Three.js.",
@@ -333,7 +357,7 @@ export const myProjects = [
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "Three.js", path: "/assets/logos/threejs.svg" },
-      { id: 3, name: "GSAP", path: "/assets/logos/gsap.svg" },
+      { id: 3, name: "JavaScript", path: "/assets/logos/javascript.svg" },
       { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
     ],
   },
@@ -369,12 +393,12 @@ export const mySocials = [
   },
   {
     name: "Linkedin",
-    //href: "https://www.linkedin.com/in/ali-sanati/",
+    href: "https://linkedin.com/in/sagar-sharma-751943336",
     icon: "/assets/socials/linkedIn.svg",
   },
   {
     name: "Instagram",
-    //href: "https://www.instagram.com/ali.sanatidev/reels/",
+    href: "https://linkedin.com/in/sagar-sharma-751943336",
     icon: "/assets/socials/instagram.svg",
   },
 ];

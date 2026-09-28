@@ -15,7 +15,7 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <p>© 2025 Sagar. All rights reserved.</p>
+      <p>© 2026 Sagar. All rights reserved.</p>
     </section>
   );
 };

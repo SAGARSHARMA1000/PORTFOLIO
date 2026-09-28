@@ -28,15 +28,15 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      console.log("From submitted:", formData);
+     // console.log("From submitted:", formData);
       await emailjs.send(
         "service_79b0nyj",
         "template_17us8im",
         {
           from_name: formData.name,
-          to_name: "Ali",
+          to_name: "Sagar",
           from_email: formData.email,
-          to_email: "AliSanatiDev@gmail.com",
+          to_email: "sagar09shrm@gmail.com",
           message: formData.message,
         },
         "pn-Bw_mS1_QQdofuV"
