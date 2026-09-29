@@ -19,8 +19,6 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I'm Sagar Sharma</p>
             <p className="subtext">
-              {/* Over the last 4 years, I developed my frontend and backend dev */}
-              {/* skills to deliver dynamic and software and web applications. */}
               I'm passionate about building scalable and user-centric web
               applications. I enjoy turning ideas into real-world products using
               modern web technologies.
@@ -144,11 +142,8 @@ const About = () => {
             {/* Tech Stack Icons */}
 
             
-
-           
-
             <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
+              style={{ rotate: "-45deg", top: "2%", left: "10%" }}
               image="assets/logos/vitejs.svg"
               containerRef={grid2Container}
               floating
@@ -162,7 +157,7 @@ const About = () => {
             />
 
             <Card
-              style={{ rotate: "-20deg", bottom: "5%", left: "5%" }}
+              style={{ rotate: "-20deg", bottom: "2%", left: "5%" }}
               image="assets/logos/nodejs.svg"
               containerRef={grid2Container}
               floating
@@ -175,20 +170,15 @@ const About = () => {
               floating
             />
 
+        
             <Card
-              style={{ rotate: "-30deg", top: "35%", left: "5%" }}
+              style={{ rotate: "30deg", top: "5%", left: "85%" }}
               image="assets/logos/tailwindcss.svg"
               containerRef={grid2Container}
               floating
             />
             <Card
-              style={{ rotate: "30deg", top: "5%", left: "85%" }}
-              image="assets/logos/auth0.svg"
-              containerRef={grid2Container}
-              floating
-            />
-            <Card
-              style={{ rotate: "-40deg", bottom: "20%", right: "30%" }}
+              style={{ rotate: "-40deg", bottom: "15%", right: "30%" }}
               image="assets/logos/express.svg"
               containerRef={grid2Container}
               floating
@@ -230,7 +220,7 @@ const About = () => {
             <p className="headText">Teck Stack</p>
             <p className="subtext">
               I specialize in a variety of languages, frameworks, and tools that
-              allow me to build robust and scalable applications
+              allow me to build robust and scalable applications.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
