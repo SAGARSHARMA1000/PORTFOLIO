@@ -44,24 +44,24 @@ const ReviewCard = ({ icon, name, username, body, index }) => {
             icon
           )}
         </motion.div>
-        <span className="rounded-full border border-aqua/20 bg-aqua/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-aqua">
+        <span className="rounded-full border border-aqua/20 bg-aqua/10 px-2.5 py-1 text-[10px] font-mono font-semibold uppercase tracking-wider text-aqua">
           0{index + 1}
         </span>
       </div>
 
       <div className="relative mt-5">
-        <figcaption className="text-base font-semibold text-white">{name}</figcaption>
-        <p className="mt-1 text-xs font-medium uppercase tracking-[0.16em] text-lavender">
+        <figcaption className="text-base font-semibold font-primary text-white">{name}</figcaption>
+        <p className="mt-1 text-xs font-medium font-mono uppercase tracking-[0.16em] text-lavender">
           {username}
         </p>
       </div>
-      <blockquote className="relative mt-4 text-sm leading-6 text-neutral-400">
+      <blockquote className="relative mt-4 text-sm font-secondary leading-6 text-neutral-400">
         {body}
       </blockquote>
 
       <div className="relative mt-auto flex items-center gap-1 pt-5">
         <span className="h-px w-8 bg-gradient-to-r from-aqua to-transparent" />
-        <span className="text-[10px] uppercase tracking-widest text-neutral-600">
+        <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-600">
           capability
         </span>
       </div>
@@ -97,25 +97,25 @@ export default function Testimonial() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-aqua">
+            <p className="mb-4 text-xs font-mono font-semibold uppercase tracking-[0.35em] text-aqua">
               What I bring to the table
             </p>
-            <h2 className="max-w-xl text-4xl font-bold leading-tight text-white md:text-5xl">
+            <h2 className="max-w-xl font-primary text-4xl font-bold leading-tight text-white md:text-5xl">
               Core <span className="text-lavender">Competencies</span>
             </h2>
-            <p className="mt-5 max-w-md text-sm leading-7 text-neutral-400 md:text-base">
+            <p className="mt-5 max-w-md text-sm font-secondary leading-7 text-neutral-400 md:text-base">
               A practical toolkit shaped by real products, problem-solving, and a
               constant curiosity to build better software.
             </p>
 
             <div className="mt-8 flex gap-8 border-t border-white/10 pt-6">
               <div>
-                <p className="text-2xl font-bold text-white">08<span className="text-aqua">+</span></p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-neutral-500">focus areas</p>
+                <p className="text-2xl font-bold font-primary text-white">08<span className="text-aqua">+</span></p>
+                <p className="mt-1 text-xs font-mono uppercase tracking-widest text-neutral-500">focus areas</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-white">300<span className="text-aqua">+</span></p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-neutral-500">problems solved</p>
+                <p className="text-2xl font-bold font-primary text-white">500<span className="text-aqua">+</span></p>
+                <p className="mt-1 text-xs font-mono uppercase tracking-widest text-neutral-500">problems solved</p>
               </div>
             </div>
 

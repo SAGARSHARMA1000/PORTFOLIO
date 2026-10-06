@@ -48,10 +48,10 @@ const Project = ({ project, index, position, onOpen }) => {
         <span className={`relative flex items-center justify-center rounded-full bg-gradient-to-br ${colors.planet} ${colors.glow} ${index === 1 ? "size-36 md:size-48" : "size-28 md:size-36"} border border-white/30 transition-transform duration-300 group-hover:scale-110`}>
           <span className="absolute inset-[12%] rounded-full bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.5),transparent_18%),radial-gradient(circle_at_70%_75%,rgba(0,0,0,0.35),transparent_50%)]" />
           <span className="absolute -inset-3 rounded-full border border-white/10 opacity-70" />
-          <span className="relative max-w-[75%] text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-white drop-shadow md:text-xs">{name}</span>
+          <span className="relative max-w-[75%] text-center text-[10px] font-bold uppercase tracking-[0.2em] font-primary text-white drop-shadow md:text-xs">{name}</span>
         </span>
-        <span className="mt-4 text-xs font-semibold uppercase tracking-[0.28em] text-white/90">{name}</span>
-        <span className={`mt-1 text-[10px] uppercase tracking-[0.18em] ${colors.text}`}>Mission {mission}</span>
+        <span className="mt-4 text-xs font-semibold uppercase tracking-[0.28em] font-primary text-white/90">{name}</span>
+        <span className={`mt-1 text-[10px] font-medium uppercase tracking-[0.2em] font-mono ${colors.text}`}>MISSION {mission}</span>
       </motion.button>
       <motion.div
         className="pointer-events-none absolute left-1/2 top-full z-30 mt-4 w-64 -translate-x-1/2 rounded-xl border border-white/15 bg-[#081024]/90 p-4 text-left shadow-2xl backdrop-blur-xl max-md:hidden"
@@ -59,11 +59,11 @@ const Project = ({ project, index, position, onOpen }) => {
         animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : -6 }}
         transition={{ duration: 0.2 }}
       >
-        <p className={`text-[10px] uppercase tracking-[0.24em] ${colors.text}`}>● Project detected</p>
-        <p className="mt-2 text-lg font-semibold text-white">{name}</p>
-        <p className="mt-1 text-xs text-white/55">{meta.category}</p>
-        <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-white/45">{project.tags.slice(0, 4).map((tag) => tag.name).join(" · ")}</p>
-        <p className="mt-3 text-right text-[10px] font-semibold uppercase tracking-[0.2em] text-white">Explore project →</p>
+        <p className={`text-[10px] font-medium uppercase tracking-[0.24em] font-mono ${colors.text}`}>● Project detected</p>
+        <p className="mt-2 text-lg font-bold font-primary text-white">{name}</p>
+        <p className="mt-1 text-xs font-secondary text-white/55">{meta.category}</p>
+        <p className="mt-3 text-[10px] font-mono uppercase tracking-[0.16em] text-white/45">{project.tags.slice(0, 4).map((tag) => tag.name).join(" · ")}</p>
+        <p className="mt-3 text-right text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-white">Explore project →</p>
       </motion.div>
     </motion.div>
   );

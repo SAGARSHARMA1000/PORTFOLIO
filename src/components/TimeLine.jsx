@@ -1,4 +1,4 @@
-﻿import {
+import {
   motion,
   useInView,
   useMotionValueEvent,
@@ -46,11 +46,11 @@ export const Timeline = ({ data = [] }) => {
         className="mb-12 flex items-end justify-between gap-6"
       >
         <div>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-lavender">The path so far</p>
-          <h2 className="text-heading">My Journey</h2>
+          <p className="mb-3 text-xs font-mono font-semibold uppercase tracking-[0.35em] text-lavender">The path so far</p>
+          <h2 className="text-heading font-primary">My Journey</h2>
         </div>
         <motion.div
-          className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs text-neutral-400 sm:flex"
+          className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-mono text-neutral-400 sm:flex"
           whileHover={{ borderColor: "rgba(122,87,219,.6)", color: "#fff" }}
         >
           <span className="size-2 animate-pulse rounded-full bg-aqua" />
@@ -85,17 +85,17 @@ export const Timeline = ({ data = [] }) => {
                 </motion.div>
 
                 <div className="hidden flex-col gap-1 pl-8 md:flex">
-                  <span className="text-sm font-medium text-lavender">{item.date}</span>
-                  <h3 className="text-2xl font-bold text-neutral-200 transition-colors group-hover:text-white lg:text-3xl">{item.title}</h3>
-                  <p className="text-lg text-neutral-500">{item.job}</p>
+                  <span className="text-sm font-mono font-medium text-lavender">{item.date}</span>
+                  <h3 className="text-2xl font-bold font-primary text-neutral-200 transition-colors group-hover:text-white lg:text-3xl">{item.title}</h3>
+                  <p className="text-lg font-secondary text-neutral-500">{item.job}</p>
                 </div>
               </div>
 
               <div className="relative ml-6 w-full pl-6 md:ml-0 md:pl-4">
                 <div className="mb-5 md:hidden">
-                  <span className="text-sm font-medium text-lavender">{item.date}</span>
-                  <h3 className="mt-1 text-2xl font-bold text-neutral-200">{item.title}</h3>
-                  <p className="text-neutral-500">{item.job}</p>
+                  <span className="text-sm font-mono font-medium text-lavender">{item.date}</span>
+                  <h3 className="mt-1 text-2xl font-bold font-primary text-neutral-200">{item.title}</h3>
+                  <p className="text-neutral-500 font-secondary">{item.job}</p>
                 </div>
 
                 <motion.div
@@ -105,7 +105,7 @@ export const Timeline = ({ data = [] }) => {
                     isActive ? "border-lavender/30 bg-gradient-to-br from-lavender/[0.14] to-white/[0.03]" : "border-white/[0.07] bg-white/[0.025] group-hover:border-white/15"
                   }`}
                 >
-                              <div className="relative space-y-3">
+                  <div className="relative space-y-3">
                     {item.contents.map((content, contentIndex) => (
                       <motion.p
                         key={contentIndex}
@@ -113,7 +113,7 @@ export const Timeline = ({ data = [] }) => {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 + contentIndex * 0.08 }}
-                        className="flex gap-3 text-sm leading-7 text-neutral-400 md:text-base"
+                        className="flex gap-3 text-sm font-secondary leading-7 text-neutral-400 md:text-base"
                       >
                         <span className="mt-3 size-1.5 shrink-0 rounded-full bg-aqua/70" />
                         <span>{content}</span>
@@ -132,7 +132,7 @@ export const Timeline = ({ data = [] }) => {
           className="absolute left-[18px] top-0 w-[3px] rounded-full bg-gradient-to-b from-aqua via-lavender to-transparent shadow-[0_0_14px_rgba(122,87,219,0.7)]"
         />
         <motion.span
-          className="absolute -left-1 top-0 hidden -translate-x-full rounded-full border border-white/10 bg-midnight px-2 py-1 text-[10px] text-neutral-500 md:block"
+          className="absolute -left-1 top-0 hidden -translate-x-full rounded-full border border-white/10 bg-midnight px-2 py-1 text-[10px] font-mono text-neutral-500 md:block"
           style={{ top: useTransform(progressHeight, (value) => `${value}%`) }}
         >
           {progressLabel}

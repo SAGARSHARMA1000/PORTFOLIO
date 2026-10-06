@@ -1,24 +1,24 @@
 import { motion, useReducedMotion } from "motion/react";
 import { useMemo } from "react";
+import { twMerge } from "tailwind-merge";
 
-const Card = ({ style, text, image, containerRef, floating = false }) => {
+const Card = ({ style, text, image, containerRef, floating = false, className, label }) => {
   const prefersReducedMotion = useReducedMotion();
   const floatingPath = useMemo(() => {
     if (!floating) return undefined;
 
-    // Keep the movement subtle so cards remain near their starting positions.
     const randomOffset = (amount) =>
       Math.round((Math.random() * 2 - 1) * amount);
 
     return {
-      x: [0, randomOffset(28), randomOffset(18), randomOffset(32), 0],
-      y: [0, randomOffset(22), randomOffset(34), randomOffset(16), 0],
+      x: [0, randomOffset(14), randomOffset(8), randomOffset(18), 0],
+      y: [0, randomOffset(12), randomOffset(16), randomOffset(8), 0],
     };
   }, [floating]);
 
   const floatingTransition = useMemo(
     () => ({
-      duration: 9 + Math.random() * 5,
+      duration: 8 + Math.random() * 4,
       ease: "easeInOut",
       repeat: Infinity,
       repeatType: "mirror",
@@ -31,26 +31,37 @@ const Card = ({ style, text, image, containerRef, floating = false }) => {
     : {};
 
   return image && !text ? (
-    <motion.img
-      className="absolute w-15 cursor-grab"
-      src={image}
+    <motion.div
+      className={twMerge(
+        "absolute flex items-center justify-center p-2 rounded-xl border border-white/10 bg-white/[0.06] backdrop-blur-md shadow-lg cursor-grab hover:border-aqua/50 hover:bg-white/10 transition-colors",
+        className
+      )}
       style={style}
-      whileHover={{ scale: 1.05 }}
-      whileDrag={{ scale: 1.08, cursor: "grabbing", zIndex: 20 }}
+      whileHover={{ scale: 1.14, zIndex: 25 }}
+      whileDrag={{ scale: 1.18, cursor: "grabbing", zIndex: 30 }}
       drag
       dragConstraints={containerRef}
-      dragElastic={1}
+      dragElastic={0.8}
       {...motionProps}
-    />
+    >
+      <img
+        src={image}
+        alt={label || "tech icon"}
+        className="size-5 sm:size-7 md:size-8 object-contain pointer-events-none select-none"
+      />
+    </motion.div>
   ) : (
     <motion.div
-      className="absolute px-1 py-4 text-xl text-center rounded-full ring ring-gray-700 font-extralight bg-storm w-[12rem] cursor-grab"
+      className={twMerge(
+        "absolute px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm md:text-base text-center rounded-full border border-white/15 font-primary font-medium bg-gradient-to-r from-storm/95 to-indigo/95 backdrop-blur-md shadow-lg cursor-grab text-neutral-200 hover:border-lavender/60 hover:text-white whitespace-nowrap transition-colors",
+        className
+      )}
       style={style}
-      whileHover={{ scale: 1.05 }}
-      whileDrag={{ scale: 1.04, cursor: "grabbing", zIndex: 20 }}
+      whileHover={{ scale: 1.08, zIndex: 25 }}
+      whileDrag={{ scale: 1.12, cursor: "grabbing", zIndex: 30 }}
       drag
       dragConstraints={containerRef}
-      dragElastic={1}
+      dragElastic={0.8}
       {...motionProps}
     >
       {text}
